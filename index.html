@@ -27,9 +27,7 @@
         text-align: center;
         z-index: 1000;
         padding: 14px 0;
-
         background: #f9fafb; /* light gray background */
-        backdrop-filter: none; /* remove blur effect since background is solid */
       }
 
       .site-header img {
@@ -41,7 +39,7 @@
       main {
         display: flex;
         justify-content: center;
-        padding: 2rem 1rem 6rem; /* bottom padding so content scrolls nicely */
+        padding: 2rem 1rem 6rem;
       }
 
       .card {
@@ -107,7 +105,7 @@
         <p>
           <span
             style="
-              background: #f9fafb; /* light gray background */
+              background: #f9fafb;
               color: #374151;
               padding: 0.25rem 0.75rem;
               border-radius: 1rem;
@@ -119,8 +117,10 @@
         <h1>Claim Your Special Offer - $100 Off Any Training Package - &amp; Book a Quick Phone Chat</h1>
         <p>Fill out the form and choose a date/time that works for you. We'll confirm by email or text.</p>
 
-        <form name="promo100" method="POST" data-netlify="true" action="/thanks.html">
-          <input type="hidden" name="form-name" value="promo100" />
+        <!-- ✅ Updated Formspree form -->
+        <form action="https://formspree.io/f/xblzyllp" method="POST">
+          <!-- redirect after submit -->
+          <input type="hidden" name="_redirect" value="https://denicesp.github.io/promo-100-site/thanks.html" />
 
           <div class="form-group">
             <label for="name">Full name *</label>
